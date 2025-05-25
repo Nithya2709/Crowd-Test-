@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tester Dashboard - CrowdTesting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Tester Dashboard</h1>
+    <div class="nav-buttons">
+      <button id="homeBtn">Home</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="available-projects-section">
+      <h2>Available Projects to Test</h2>
+      <div id="availableProjectsList">Loading projects...</div>
+    </section>
+
+    <section class="submit-bug-section" style="display:none;">
+      <h2>Submit Bug Report</h2>
+      <form id="bugReportForm">
+        <input type="hidden" id="bugProjectId" />
+        
+        <label for="bugDescription">Bug Description *</label>
+        <textarea id="bugDescription" rows="4" required></textarea>
+
+        <button type="submit">Submit Bug</button>
+      </form>
+    </section>
+    <section class="my-bugs-section">
+    <h2>My Submitted Bug Reports</h2>
+    <div id="myBugReportsList">Loading bug reports...</div>
+    </section>
+
+  </main>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="firebase.js"></script>
+  <script src="tester-dashboard.js"></script>
+</body>
+</html>
