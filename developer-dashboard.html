@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Developer Dashboard - CrowdTesting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Developer Dashboard</h1>
+    <div class="nav-buttons">
+      <button id="homeBtn">Home</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="submit-project-section">
+      <h2>Submit a New Project</h2>
+      <form id="projectForm">
+        <label for="projectName">Project Name *</label>
+        <input type="text" id="projectName" required />
+
+        <label for="projectDesc">Project Description *</label>
+        <textarea id="projectDesc" rows="4" required></textarea>
+
+        <label>Code Input Type *</label>
+        <div>
+          <input type="radio" id="codeTextRadio" name="codeInputType" value="text" checked />
+          <label for="codeTextRadio">Paste code here</label>
+
+          <input type="radio" id="codeFileRadio" name="codeInputType" value="file" />
+          <label for="codeFileRadio">Upload code files</label>
+        </div>
+
+        <textarea id="codeTextArea" placeholder="Paste your code here..." rows="6"></textarea>
+        <input type="file" id="codeFilesInput" multiple style="display:none;" />
+
+        <label for="testSuggestion">Suggestions for Testers (Optional)</label>
+        <textarea id="testSuggestion" rows="3"></textarea>
+
+        <button type="submit">Submit Project</button>
+      </form>
+    </section>
+
+    <section class="my-projects-section">
+      <h2>My Projects</h2>
+      <div id="projectsList">Loading projects...</div>
+    </section>
+
+    <section class="bug-reports-section">
+      <h2>Bug Reports</h2>
+      <div id="bugReportsList">Loading bug reports...</div>
+      
+    </section>
+  </main>
+
+
+
+ <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <script src="firebase.js"></script>
+  <script src="developer-dashboard.js"></script>
+</body>
+</html>
