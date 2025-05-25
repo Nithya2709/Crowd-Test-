@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CrowdTesting - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h1>CrowdTesting</h1>
+    <div class="nav-buttons">
+      <button id="loginBtn">Login</button>
+      <button id="signupBtn">Signup</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Welcome to CrowdTesting Platform</h2>
+      <p>Submit your software projects and get them tested by a diverse community of testers.</p>
+      <div class="role-buttons">
+        <button id="developerBtn" class="role-btn">Developer</button>
+        <button id="testerBtn" class="role-btn">Tester</button>
+      </div>
+    </section>
+  </main>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<!-- Your Scripts (MUST come after Firebase scripts) -->
+  <script src="firebase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
